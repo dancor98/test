@@ -1,0 +1,46 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.contenedor-login{
+    display: flex;
+        flex-wrap: wrap; /* Permitir que los elementos se envuelvan en dispositivos pequeños */
+        gap: 0; /* Espacio entre las columnas */
+    @include m.tablet {
+        padding: 0;
+    }
+}
+
+
+.columna {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    display: flex; /* Utilizar flexbox para el contenido interno */
+    flex-direction: column; /* Alinear el contenido en columna */
+    align-items: center; /* Centrar el contenido horizontalmente */
+    justify-content: center; /* Centrar el contenido verticalmente */
+        @include m.tablet {
+         width: 100%; 
+    }
+    width: 100%; /* Ancho del div */
+    height: 120vh; /* Altura del div */
+    background-image: url('../img/hero.webp'); /* Ruta a la imagen */
+    background-size: cover; /* Escalar la imagen para cubrir el div */
+    background-position: center center; /* Centrar la imagen en el div */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    @include m.tablet {
+         height: 110vh; 
+    }
+}
+
+
+.login{ 
+    background-color: rgba(0, 0, 0, 0.5); /* Negro con una opacidad del 50% */
+    padding: 2rem 3rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    &__heading{
+        margin: 0;
+        padding: 0;
+        color: v.$blanco;
+    }
+}

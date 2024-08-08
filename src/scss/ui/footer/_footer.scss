@@ -1,0 +1,31 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+footer{
+    background-color: v.$gris-oscuro;
+}
+
+
+.opciones-footer{
+    font-size: 1.6rem;
+}
+
+.nav-link-footer{
+    font-size: 1.3rem;
+    color: v.$blanco;
+    text-decoration: underline;
+}
+
+.icono-social{
+    font-size: 3rem;
+    color: v.$blanco;
+    padding-right: 1rem;
+}
+
+.footer-descripcion{
+    font-size: 1.5rem;
+}
+
+.copy{
+    font-size: 1rem;
+}

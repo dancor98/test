@@ -1,0 +1,335 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.contenedor-login{
+    width: 100%;
+}
+
+.hero{
+    width: 100%; /* Ancho del div */
+    height: 50vh; /* Altura del div */
+    
+    background-image: url('../img/hero.webp'); /* Ruta a la imagen */
+    background-size: cover; /* Escalar la imagen para cubrir el div */
+    background-position: top center; /* Centrar la imagen en el div */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    border-radius: 0 0 2rem 2rem;
+    @include m.desktop {
+         height: 90vh; 
+    }
+}
+.hero2{
+    width: 100%; /* Ancho del div */
+    height: 50vh; /* Altura del div */
+    
+    background-image: url('../img/fondo.webp'); /* Ruta a la imagen */
+    background-size: cover; /* Escalar la imagen para cubrir el div */
+    background-position: top center; /* Centrar la imagen en el div */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    border-radius: 0 0 2rem 2rem;
+    @include m.desktop {
+         height: 90vh; 
+    }
+}
+.hero3{
+    width: 100%; /* Ancho del div */
+    height: 50vh; /* Altura del div */
+    
+    background-image: url('../img/productosservicios.webp'); /* Ruta a la imagen */
+    background-size: cover; /* Escalar la imagen para cubrir el div */
+    background-position: top center; /* Centrar la imagen en el div */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    border-radius: 0 0 2rem 2rem;
+    @include m.desktop {
+         height: 90vh; 
+    }
+}
+
+.subtitulo-inicio{
+    text-decoration: underline;
+    font-size: 2.5rem;
+    text-align: left;
+    @include m.desktop {
+         font-size: 3rem; 
+    }
+    
+}
+.subtitulo-tiendas{
+    text-decoration: underline;
+    font-size: 2rem;
+    text-align: left;
+    @include m.desktop {
+         font-size: 2rem; 
+    }
+    
+}
+
+.descripcion-inicio{
+    font-size: 2rem;
+    line-height: 2.5;
+    &--2{
+        line-height: 2;
+    }
+}
+.descripcion-tiendas{
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.imagen-mapa{
+    width: 30rem; /* Ancho deseado */
+height: auto; /* Mantener la proporción */
+@include m.tablet {
+     width: 60rem; 
+}
+}
+.imagen-linea{
+visibility: hidden;
+@include m.desktop {
+    visibility: visible;
+    height: auto;
+     width: 120rem; 
+     padding: 5rem 10rem;
+}
+}
+
+.texto-ccm{
+    font-size: 2.3rem;
+    text-align: justify;
+    
+}
+.firma-ceo{
+    font-size: 2rem;
+    font-weight: lighter;
+    text-align: right !important;
+}
+
+.video{
+    width: 40rem;
+    height: 50rem;
+    @include m.tablet {
+         height: 50rem;
+         width: 60rem;
+    }
+
+}
+
+.contenedor{
+    padding: 2rem 4rem;
+    @include m.tablet {
+         padding: 2rem 4rem; 
+    }
+
+    @include m.desktop {
+        padding: 2rem 15rem; 
+    }
+}
+
+.contenedor-postulacion{
+    margin: 20rem 3rem;
+    padding: 2rem 4rem;
+    @include m.desktop {
+         padding: 2rem 15rem; 
+         margin: 20rem;
+    }
+}
+
+.principal-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include m.desktop {
+        flex-direction: row;
+        justify-content: center; //
+    }
+}
+
+.columna1, .columna2{
+    margin: 1rem 0 2rem;
+    @include m.desktop {
+        flex: 1;
+        margin: 0 3rem;
+    }
+}
+
+.columna0{
+    margin: 1rem 2rem;
+    @include m.tablet {
+         margin: 0 3rem; 
+    }
+}
+
+.columna1{
+    @include m.desktop {
+        &__invertir{
+            order: 2;
+        }
+    }
+
+    &--card{
+        border: 1px solid v.$gris-claro;
+        border-radius: 1rem;
+        padding-bottom: 1rem;
+        -webkit-box-shadow: 10px 10px 26px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 26px -5px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 26px -5px rgba(0,0,0,0.75);
+
+    }
+}
+.columna2{
+    @include m.desktop {
+        &__invertir{
+            order: 1;
+        } 
+    }
+}
+
+.imagen-card{
+    border-radius: 1rem 1rem 0 0;
+}
+
+.titulo-card{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.botones-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botones-ver {
+    display: block;
+    padding: 1rem 2rem; /* Espaciado interno del botón */
+    background-color: v.$gris-oscuro; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 5px; /* Borde redondeado */
+    font-size: 16px; /* Tamaño del texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+    @include m.tablet {
+        display: inline-block;
+        justify-content: center;
+    }
+
+    &:hover{
+        background-color: v.$gris-claro; 
+        border: 2px solid v.$gris-oscuro;
+        color: v.$gris-oscuro;
+        font-weight: bold;
+    }
+}
+
+
+
+.botones-opciones {
+    display: block;
+    padding: 1rem 2rem; /* Espaciado interno del botón */
+    background-color: v.$gris-oscuro; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 5px; /* Borde redondeado */
+    font-size: 16px; /* Tamaño del texto */
+    text-align: center; /* Centra el texto horizontalmente */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+    @include m.tablet {
+        display: inline-block;
+        justify-content: center;
+    }
+
+    &:hover{
+        background-color: v.$gris-claro; 
+        border: 2px solid v.$gris-oscuro;
+        color: v.$gris-oscuro;
+        font-weight: bold;
+    }
+}
+
+
+.titulo-inicio{
+    width: 100%; /* Ancho completo en dispositivos pequeños */
+    padding:2rem 0;
+    text-align: center; /* Alinear el texto al centro */
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 1rem 0;
+    
+    @include m.desktop {
+        text-align: left;
+         font-size: 3.5rem;
+         padding: 5rem 0;
+         margin: 0 3rem;
+    }
+
+    &--2{
+        text-align: center;
+        @include m.desktop {
+            text-align: right; 
+            padding-right: 10rem;
+        }
+    }
+    &--3{
+        text-align: center;
+        padding-bottom: 1rem;
+        @include m.desktop {
+            padding-bottom: 4rem; 
+        }
+    }
+}
+
+
+.img-servicios{
+        border-radius: 20% 0 20% 0;
+}
+.img-empresas{
+        border-radius: 50%;
+}
+
+.img-marcas{
+    width: 20rem;
+    border-radius: 5%;
+    transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    filter: grayscale(100%);
+    opacity: 0.5;
+
+    &:hover{
+        -webkit-box-shadow: 10px 10px 26px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 26px -5px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 26px -5px rgba(0,0,0,0.75);
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+    @include m.tablet {
+         width: 25rem; 
+    }
+}
+
+.espacio{
+    margin: 2rem 0;
+    @include m.desktop {
+         margin: 10rem 0; 
+    }
+}
+
+.espacio-2{
+    padding-bottom: 0;
+    @include m.tablet {
+        padding-bottom: 3rem; 
+    }
+}
+.espacio-3{
+    margin-bottom: 3rem;
+}
+
+.postulacion{
+    border-radius: 1rem;
+    -webkit-box-shadow: 10px 10px 26px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 26px -5px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 26px -5px rgba(0,0,0,0.75);
+}
+
+

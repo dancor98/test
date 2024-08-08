@@ -1,0 +1,100 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+////////////////////////////////////////////////
+
+.menu{
+    padding: 2rem 3rem;
+    &__admin{
+        padding: 2rem 1rem;
+    }
+}
+
+.menu-top{
+    padding: 2rem 3rem;
+    position: fixed; /* Fija el div en la pantalla */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición en la parte izquierda */
+    width: 100%; /* Ancho del div para que ocupe toda la pantalla */
+    z-index: 1000; /* Asegura que el div esté por encima de otros elementos */
+}
+
+.navbar-inicio{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+border-radius: 2rem;
+padding: 2rem;
+-webkit-box-shadow: 0px 18px 33px -4px rgba(0, 0, 0, 0.65);
+-moz-box-shadow: 0px 18px 33px -4px rgba(0, 0, 0, 0.65);
+box-shadow: 0px 18px 33px -4px rgba(0, 0, 0, 0.65);
+}
+.navbar-admin{
+    background: v.$gris-oscuro;
+border-radius: 2rem;
+padding: 2rem ;
+margin: 0.4rem 1rem;
+@include m.desktop {
+     margin: 0.2rem 3rem; 
+}
+-webkit-box-shadow: 0px 18px 33px -4px rgba(0, 0, 0, 0.65);
+-moz-box-shadow: 0px 18px 33px -4px rgba(0, 0, 0, 0.65);
+box-shadow: 0px 18px 33px -4px rgba(0, 0, 0, 0.65);
+
+}
+
+
+
+.navbar-inicio-logo {
+width: 120px; /* Ancho deseado */
+height: auto; /* Mantener la proporción */
+padding-left: 1rem;
+}
+
+.collapse{
+    padding-top: 2rem;
+    @include m.desktop {
+         padding: 0; 
+    }
+}
+
+.nav-link-menu{
+font-size: 1.5rem;
+color: v.$blanco;
+margin-right: 2rem;
+font-weight: v.$bold;
+padding-bottom: 2rem;
+&:hover{
+    color: v.$gris-claro;
+    text-decoration: underline;
+}
+@include m.desktop {
+     padding-bottom: 0; 
+}
+}
+
+.icono-menu{
+font-size: 1.7rem;
+color: v.$blanco;
+}
+
+.navbar-toggler{
+    border: none;
+}
+
+.boton-logout{
+    font-size: 1.5rem;
+    color: v.$blanco;
+    margin-right: 2rem;
+    font-weight: v.$bold;
+    padding-bottom: 2rem;
+    background-color: v.$gris-oscuro;
+    border: none;
+    &:hover{
+        color: v.$gris-claro;
+        text-decoration: underline;
+    }
+    @include m.desktop {
+         padding-bottom: 0; 
+         margin-top: 6.6px;
+    }
+}
